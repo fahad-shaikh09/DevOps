@@ -29,3 +29,7 @@ sudo apt install jenkins
 service jenkins status
 service jenkins enable
 cat /var/lib/jenkins/secrets/initialAdminPassword
+
+----FOR TRIGGERING GITHUB_WEBHOOK----
+URL/github-webhook
+like http://localhost:8080/github-webhook
