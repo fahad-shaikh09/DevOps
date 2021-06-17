@@ -1,0 +1,31 @@
+----TO INSTALL GIT----
+apt install git
+git --version
+
+----TO INSTALL JAVA 1.8----
+add-apt-repository ppa:openjdk-r/ppa
+apt-get update
+apt-get install openjdk-8-jdk
+java -version
+clear
+alternatives --config java (it will show path where JAVA is installed)
+echo $JAVA_HOME
+ls /usr/lib/jvm/java-8-openjdk-amd64/
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+echo $JAVA_HOME
+vim /etc/profile
+echo $JAVA_HOME
+echo $PATH
+
+----INSTALL MAVEN----
+apt install maven
+mvn --version
+
+----INSTALL JENKINS----
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt update
+sudo apt install jenkins
+service jenkins status
+service jenkins enable
+cat /var/lib/jenkins/secrets/initialAdminPassword
