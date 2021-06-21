@@ -11,9 +11,11 @@ clear
 alternatives --config java (it will show path where JAVA is installed)
 echo $JAVA_HOME
 ls /usr/lib/jvm/java-8-openjdk-amd64/
+
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 echo $JAVA_HOME
-vim /etc/profile
+
+/etc/profile.d/*.sh
 echo $JAVA_HOME
 echo $PATH
 
